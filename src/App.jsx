@@ -19,11 +19,17 @@ function App() {
   let stop=()=>{
     clearInterval(timerId)
   }
+  let reset=()=>{
+    clearInterval(timerId)
+    setCount(0)
+  }
   return (
     <>
       <h1>Counter : {count}</h1>
       <button onClick={start}>Start</button>
       <button onClick={stop}>Stop</button>
+      <button onClick={reset}>Reset</button>
+
         
     </>
   )
